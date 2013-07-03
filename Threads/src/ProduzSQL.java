@@ -13,9 +13,9 @@ public class ProduzSQL implements Runnable{
 	
 	public void run() {
 		for (int i = comeco; i < fim; i++) {
-			
+			synchronized(sqls) {
 				sqls.add("SQL"+i);
-			
+			}
 		}
 	}
 }
